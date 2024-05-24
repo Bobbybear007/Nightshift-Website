@@ -6,15 +6,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     const nav = document.createElement('nav');
-    nav.style.cssText = 'display: flex; justify-content: center; align-items: center; width: 100%;';
+    nav.style.cssText = 'display: flex; justify-content: center; align-items: center; width: 100%; position: relative;';
 
     const ul = document.createElement('ul');
-    ul.style.cssText = 'list-style-type: none; display: flex; justify-content: center; align-items: center; padding: 0; margin: 0; width: auto;';
+    ul.style.cssText = 'list-style-type: none; display: flex; justify-content: center; align-items: center; padding: 0; margin: 0;';
 
     const links = [
-        { href: 'index.html', text: 'Home' }, // Change the href to point to actual pages like 'index.html'
+        { href: 'index.html', text: 'Home' },
         { href: 'about.html', text: 'About' },
         { href: 'games.html', text: 'Games' },
+        { href: 'bloghome.html', text: 'Blog' },
         { href: 'contact.html', text: 'Contact' }
     ];
 
@@ -45,5 +46,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     nav.appendChild(ul);
+
+    // Add image to the right of the nav bar
+    const img = document.createElement('img');
+    img.src = 'images/logotrans.png'; // Replace with the actual path to your image
+    img.alt = 'Description of image';
+    img.style.cssText = 'height: 60px; position: absolute; left: 50px;'; // Adjust the size and positioning as needed
+
     header.appendChild(nav);
+    header.appendChild(img);
 });
