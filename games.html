@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nightshift Studios - Our Games</title>
+    <link rel="icon" type="image/x-icon" href="images/logotrans.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="images/logotrans.png" alt="Nightshift Studios Logo" style="height: 50px;">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Our Games</h1>
+        <div class="game-grid">
+            <div class="game-item">
+                <img src="images/OvertimePoster.jpg" alt="Overtime" onclick="navigateToGame('overtime.html');">
+            </div>
+            
+            <!-- Add more game items as needed -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Nightshift Studios. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function navigateToGame(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%; /* Ensures the body takes at least the full height of the viewport */
+    min-height: 100vh; /* This ensures the page covers the minimum height of the viewport */
+    font-family: Arial, sans-serif;
+    color: #E0E0E0;
+    background: linear-gradient(to bottom, #0b1828, #02050a); /* Adjust the colors as needed */
+    background-attachment: fixed; /* This will fix the background relative to the viewport */
+}
+
+header, .hero, section, footer {
+    background-color: transparent; /* This ensures all these elements are transparent */
+    width: 100%;
+}
+
+header {
+    background-color: transparent;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Aligns logo and navigation */
+    align-items: center; /* Vertical alignment */
+    width: 100%; /* Ensures header takes full width */
+}
+
+header img {
+    height: 70px; /* Logo height */
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Center the navigation links horizontally */
+    align-items: center; /* Center the navigation links vertically */
+    width: 100%; /* Full width to use all available space */
+}
+
+nav ul {
+    list-style-type: none; /* Removes bullet points from the list */
+    display: flex; /* Displays links in a row */
+    justify-content: center; /* Centers links horizontally */
+    align-items: center; /* Aligns links vertically */
+    padding: 0; /* No padding inside the UL */
+    margin: 0; /* No margin affects positioning */
+    width: auto; /* Auto width based on content */
+}
+
+nav a {
+    color: #E0E0E0;
+    margin: 0 15px; /* Increased margin for better spacing */
+    text-decoration: none;
+    font-size: 1.1em; /* Slightly larger font size for better legibility */
+    padding: 10px 0; /* Padding added to increase area for interaction */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+nav a:hover {
+    color: #00b5f1;
+    background-color: transparent; /* Optional: Adds a subtle background on hover for better UX */
+    font-size: 1.3em; /* Increase font size on hover */
+    padding: 15px 0; /* Increase padding on hover */
+    transform: scale(1.1); /* Optionally scale up the element */
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #E0E0E0;
+}
+
+.hero h1, .hero p {
+    font-size: 3em;
+    margin: 0.5em 0;
+}
+
+.hero button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #00b5f1;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;  
+}
+
+.hero button:hover {
+    background-color: #004860;
+    transform: scale(0.9);
+}
+
+section {
+    padding: 40px 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        padding: 20px; /* Ensure enough padding even in mobile view */
+        align-items: center; /* Centers items vertically */
+    }
+    nav {
+        width: 100%; /* Ensures nav takes full width, helpful in mobile view */
+    }
+    nav a {
+        display: block; /* Makes each link full width in mobile view */
+        text-align: center; /* Centers the text */
+        margin: 10px 0; /* Adjust margin for stacked navigation links */
+    }
+    .hero h1 {
+        font-size: 2em;
+    }
+    .hero p {
+        font-size: 1.2em;
+    }
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+    justify-items: center; /* Center items horizontally */
+    gap: 20px;
+}
+
+.game-item {
+    max-width: 600px; /* Adjust maximum width as needed */
+    border: 1px solid #ccc; /* Optional: adds a border around each game */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow for depth */
+    transition: transform 0.3s ease;
+    overflow: hidden; /* Keeps everything neat */
+}
+
+.game-item:hover {
+    transform: scale(1.03); /* Adds a slight scale effect on hover */
+    cursor: pointer;
+}
+
+.game-item img {
+    width: 100%; /* Ensures the image fills the container */
+    height: auto; /* Maintains the aspect ratio */
+    display: block;
+}
+
+.screenshot-gallery h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; /* Optional: adds rounded corners to the images */
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow for a 3D effect */
+}
+
+.gallery img:hover {
+    transform: scale(1.1); /* Optional: scale images on hover for interaction feedback */
+}
+
+.game-logo {
+    max-width: 300px; /* Adjusted logo width for better display */
+    height: auto; /* Maintains the aspect ratio */
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* This will create a responsive grid that fits multiple items in one row */
+    gap: 10px;
+    justify-items: center; /* Center items horizontally */
+}
+
+.game-item img {
+    width: 400%; /* Ensures the image fills the container */
+    max-width: 500px; /* Limit the maximum width of the image */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Ensures images are block level to handle margins correctly */
+    margin: 0 auto; /* Centers the image within the container */
+}
