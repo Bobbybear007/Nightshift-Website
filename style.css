@@ -84,7 +84,7 @@ nav a:hover {
     border: none;
     color: #fff;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;  
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .hero button:hover {
@@ -112,91 +112,33 @@ footer {
 @media (max-width: 600px) {
     header {
         flex-direction: column;
-        padding: 20px; /* Ensure enough padding even in mobile view */
-        align-items: center; /* Centers items vertically */
+        padding: 20px;
+        align-items: center;
     }
     nav {
-        width: 100%; /* Ensures nav takes full width, helpful in mobile view */
+        width: 100%;
+        padding: 10px 0;
+    }
+    nav ul {
+        flex-direction: column;
+        border-top: 1px solid #444;
+        border-bottom: 1px solid #444;
+    }
+    nav li {
+        width: 100%;
+        border-bottom: 1px solid #444;
+    }
+    nav li:last-child {
+        border-bottom: none;
     }
     nav a {
-        display: block; /* Makes each link full width in mobile view */
-        text-align: center; /* Centers the text */
-        margin: 10px 0; /* Adjust margin for stacked navigation links */
-    }
-    .hero h1 {
-        font-size: 2em;
-    }
-    .hero p {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+        padding: 10px 0;
         font-size: 1.2em;
     }
-}
+    .hero h1, .hero p {
+        font-size: 2em;
+    }
 
-.game-grid {
-    display: grid;
-    grid-template-columns: 1fr; /* Single column layout */
-    justify-items: center; /* Center items horizontally */
-    gap: 20px;
-}
-
-.game-item {
-    max-width: 600px; /* Adjust maximum width as needed */
-    border: 1px solid #ccc; /* Optional: adds a border around each game */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow for depth */
-    transition: transform 0.3s ease;
-    overflow: hidden; /* Keeps everything neat */
-}
-
-.game-item:hover {
-    transform: scale(1.03); /* Adds a slight scale effect on hover */
-    cursor: pointer;
-}
-
-.game-item img {
-    width: 100%; /* Ensures the image fills the container */
-    height: auto; /* Maintains the aspect ratio */
-    display: block;
-}
-
-.screenshot-gallery h2 {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    padding: 20px;
-}
-
-.gallery img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px; /* Optional: adds rounded corners to the images */
-    transition: transform 0.3s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow for a 3D effect */
-}
-
-.gallery img:hover {
-    transform: scale(1.1); /* Optional: scale images on hover for interaction feedback */
-}
-
-.game-logo {
-    max-width: 300px; /* Adjusted logo width for better display */
-    height: auto; /* Maintains the aspect ratio */
-}
-
-.game-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* This will create a responsive grid that fits multiple items in one row */
-    gap: 10px;
-    justify-items: center; /* Center items horizontally */
-}
-
-.game-item img {
-    width: 400%; /* Ensures the image fills the container */
-    max-width: 500px; /* Limit the maximum width of the image */
-    height: auto; /* Maintains the aspect ratio */
-    display: block; /* Ensures images are block level to handle margins correctly */
-    margin: 0 auto; /* Centers the image within the container */
-}
