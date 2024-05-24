@@ -190,7 +190,7 @@ body, html {
 .text-content {
     width: 30%;
     padding: 20px;
-    font-size: 30px;
+    font-size: px;
 }
 
 .photo {
@@ -202,3 +202,29 @@ body, html {
     height: auto;
     border-radius: 8px; /* Optional: Adds rounded corners to your image */
 }
+
+.hero-logo {
+    width: 800px; /* Adjust this value to fit your design */
+    height: auto;
+}
+
+.hero-description {
+    font-size: 10px; /* Adjust this value to fit your design, e.g., 0.8em, 0.9em */
+}
+.button-link {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #00b5f1;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.button-link:hover {
+    background-color: #004860;
+    transform: scale(0.9);
+}
+
+
+
+
