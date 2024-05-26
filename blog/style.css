@@ -251,6 +251,7 @@ body, html {
     transform: scale(1.05);
 }
 
+
 .hero-image {
     width: 50%; /* Adjust the percentage as needed */
     max-width: 300px; /* Maximum width, adjust as needed */
